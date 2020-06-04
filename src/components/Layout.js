@@ -1,10 +1,11 @@
 import Header from "./Header";
+import styles from "./Layout.module.css";
 
 function Layout({ children }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
     </>
   );
 }
