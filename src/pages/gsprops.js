@@ -1,10 +1,10 @@
-function GetServerSidePropsPage({ data }) {
+function GetStaticPropsPage({ data }) {
   return <pre>{JSON.stringify(data, null, 2)}</pre>;
 }
 
-export default GetServerSidePropsPage;
+export default GetStaticPropsPage;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   return {
     props: {
       data: {
