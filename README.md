@@ -5,7 +5,7 @@ Next.js experiment to see if we can have domain based locales with static optimi
 - [x] Component CSS
 - [x] Static HTML
 - [x] `getInitialProps` page
-- [ ] `getServerSideProps` page
+- [x] `getServerSideProps` page
 - [ ] `getStaticPaths` and `getStaticProps` page
 - [ ] Setup hosts file with language domains and international subdomains
 - [ ] Write server middleware

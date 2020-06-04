@@ -11,6 +11,10 @@ function Header() {
       <Link href="/gip">
         <a>getInitialProps</a>
       </Link>
+      {" | "}
+      <Link href="/gssp">
+        <a>getServerSideProps</a>
+      </Link>
     </header>
   );
 }
