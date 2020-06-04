@@ -7,6 +7,10 @@ function Header() {
       <Link href="/">
         <a>Home</a>
       </Link>
+      {" | "}
+      <Link href="/gip">
+        <a>getInitialProps</a>
+      </Link>
     </header>
   );
 }
