@@ -11,3 +11,11 @@ Next.js experiment to see if we can have domain based locales with static optimi
 - [ ] Setup hosts file with language domains and international subdomains
 - [ ] Write server middleware
 - [ ] Make sure API routes still work (not sure if we need this)
+
+### Hosts
+
+nexttest.com
+nexttest.es
+nexttest.de
+it.nexttest.international
+ua.nexttest.international
