@@ -15,6 +15,10 @@ function Header() {
       <Link href="/gssp">
         <a>getServerSideProps</a>
       </Link>
+      {" | "}
+      <Link href="/gspaths">
+        <a>getStaticPaths</a>
+      </Link>
     </header>
   );
 }
