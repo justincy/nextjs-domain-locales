@@ -8,14 +8,35 @@ const port = process.env.PORT || 3000;
 const app = next({ dev: process.env.NEXT_ENV !== "production" });
 const handle = app.getRequestHandler();
 
+const DEFAULT_LOCALE = "en";
+const domainLocaleMap = {
+  localhost: "en",
+  "nexttest.com": "en",
+  "nexttest.es": "es",
+  "nexttest.de": "de",
+  "it.nexttest.international": "it",
+  "ua.nexttest.international": "ua",
+};
+
+function localeRewrite(req, res, next) {
+  const locale = domainLocaleMap[req.hostname] || DEFAULT_LOCALE;
+  const originalUrl = req.url;
+  // Only handle original page requests; ignore _next requests
+  if (req.url.indexOf("/_next") === -1) {
+    req.url = `/${locale}${req.url}`;
+  }
+  if (originalUrl !== req.url) {
+    console.log(`logger: ${req.method} ${req.hostname}${originalUrl}`);
+    console.log(`rewrite: ${req.method} ${req.hostname}${req.url}`);
+  }
+  next();
+}
+
 (async () => {
   await app.prepare();
   const server = express();
 
-  server.use(function logger(req, res, next) {
-    console.log(`logger: ${req.method} ${req.url}`);
-    next();
-  });
+  server.use(localeRewrite);
   server.get("*", (req, res) => handle(req, res));
 
   await server.listen(port);

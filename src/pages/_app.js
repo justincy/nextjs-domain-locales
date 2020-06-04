@@ -1,11 +1,19 @@
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n";
+import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import "../styles.css";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  console.dir(router);
+  const { locale } = router.query;
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <I18nextProvider i18n={i18n(locale)}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </I18nextProvider>
   );
 }
 
