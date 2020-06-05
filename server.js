@@ -22,7 +22,7 @@ function localeRewrite(req, res, next) {
   const locale = domainLocaleMap[req.hostname] || DEFAULT_LOCALE;
   const originalUrl = req.url;
   // Only handle original page requests; ignore _next requests
-  if (req.url.indexOf("/_next") === -1) {
+  if (req.url.indexOf("/_next") === -1 && req.url.indexOf("/__next") === -1) {
     req.url = `/${locale}${req.url}`;
   }
   if (originalUrl !== req.url) {

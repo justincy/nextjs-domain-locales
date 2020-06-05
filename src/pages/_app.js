@@ -6,7 +6,7 @@ import "../styles.css";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  console.dir(router);
+  // console.log("app:", router);
   const { locale } = router.query;
   return (
     <I18nextProvider i18n={i18n(locale)}>

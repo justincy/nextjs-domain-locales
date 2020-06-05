@@ -9,8 +9,9 @@ Next.js experiment to see if we can have domain based locales with static optimi
 - [x] `getStaticPaths` page
 - [x] `getStaticProps` page
 - [x] Setup hosts file with language domains and international subdomains
-- [ ] Move pages inside [locale] dynamic directory and add i18n
-- [ ] Write server middleware
+- [x] Move pages inside [locale] dynamic directory
+- [ ] Integrate i18n library
+- [x] Write server URL rewrite middleware
 - [ ] Make sure API routes still work (not sure if we need this)
 
 ### Hosts
