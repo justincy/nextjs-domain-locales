@@ -4,12 +4,12 @@ function GetStaticPathsIndexPage() {
   return (
     <ul>
       <li>
-        <Link href="/gspaths/1">
+        <Link href="/gsp/1">
           <a>1</a>
         </Link>
       </li>
       <li>
-        <Link href="/gspaths/2">
+        <Link href="/gsp/2">
           <a>2</a>
         </Link>
       </li>

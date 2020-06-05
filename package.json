@@ -10,7 +10,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "i18next": "^19.4.5",
-    "next": "9.4.4",
+    "next": "file:../next.js/packages/next",
     "nodemon": "^2.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
