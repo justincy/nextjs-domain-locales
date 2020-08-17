@@ -1,21 +1,22 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+const NextI18Next = require('next-i18next').default
+const path = require('path')
 
-export const supportedLocales = ["en", "de", "es"];
+const supportedLangs = ['en', 'es'];
 
-export default function initI18N(lang) {
-  console.log("initI18N: lang:", lang);
-  i18n.use(initReactI18next);
-  i18n.init({
-    fallbackLng: "en",
-    lng: lang || "en",
-    resources: {
-      en: {
-        translation: {
-          helloWorld: "Hello world",
-        },
-      },
-    },
-  });
-  return i18n;
-}
+module.exports = new NextI18Next({
+  defaultLanguage: 'en',
+  otherLanguages: supportedLangs,
+  localePath: path.resolve('./public/static/locales'),
+  serverLanguageDetection: false,
+  browserLanguageDetection: false
+});
+
+// module.exports = function iniI18N(locale) {
+//   return new NextI18Next({
+//     defaultLanguage: locale,
+//     otherLanguages: supportedLangs,
+//     localePath: path.resolve('./public/static/locales'),
+//     serverLanguageDetection: false,
+//     browserLanguageDetection: false
+//   });
+// };

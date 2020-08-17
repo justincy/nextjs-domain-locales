@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "NODE_ENV=local nodemon server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "i18next": "^19.4.5",
     "next": "^9.5.0",
-    "nodemon": "^2.0.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-i18next": "^11.5.0"
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
