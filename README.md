@@ -1,23 +1,9 @@
-Next.js experiment to see if we can have domain based locales with static optimization by rewriting URLs on the server to prepend the locale.
-
-- [x] Setup example repo with custom server
-- [x] Global CSS
-- [x] Component CSS
-- [x] Static HTML
-- [x] `getInitialProps` page
-- [x] `getServerSideProps` page
-- [x] `getStaticPaths` page
-- [x] `getStaticProps` page
-- [x] Setup hosts file with language domains and international subdomains
-- [x] Move pages inside [locale] dynamic directory
-- [ ] Integrate i18n library
-- [x] Write server URL rewrite middleware
-- [ ] Make sure API routes still work (not sure if we need this)
+This started as a Next.js experiment to see if we can have domain based locales with static optimization by rewriting URLs on the server to prepend the locale. We almost got it working but then [Next.js v9.5.0 broke it](issues/3). We gave up and just used next-i18next with [a known solution](https://github.com/isaachinman/next-i18next/issues/16#issuecomment-520853281) to the problem.
 
 ### Hosts
 
-nexttest.com
-nexttest.es
-nexttest.de
-it.nexttest.international
-ua.nexttest.international
+- nexttest.com
+- nexttest.es
+- nexttest.de
+- it.nexttest.international
+- ua.nexttest.international
