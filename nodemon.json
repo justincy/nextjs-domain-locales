@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "ignore": ["node_modules", ".next", "src/components", "src/pages"],
+  "watch": ["server.js", "i18n.js"]
+}
