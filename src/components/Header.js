@@ -11,14 +11,6 @@ function Header() {
       <Link href="/gip">
         <a>getInitialProps</a>
       </Link>
-      {" | "}
-      <Link href="/gssp">
-        <a>getServerSideProps</a>
-      </Link>
-      {" | "}
-      <Link href="/gsp">
-        <a>getStatic(Props|Paths)</a>
-      </Link>
     </header>
   );
 }

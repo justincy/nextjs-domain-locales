@@ -18,17 +18,10 @@ const domainLocaleMap = {
   "ua.nexttest.international": "ua",
 };
 
-function localeRewrite(req, res, next) {
+function detectLocale(req, res, next) {
   const locale = domainLocaleMap[req.hostname] || DEFAULT_LOCALE;
-  const originalUrl = req.url;
-  // Only handle original page requests; ignore _next requests
-  if (req.url.indexOf("/_next") === -1 && req.url.indexOf("/__next") === -1) {
-    req.url = `/${locale}${req.url}`;
-  }
-  if (originalUrl !== req.url) {
-    console.log(`logger: ${req.method} ${req.hostname}${originalUrl}`);
-    console.log(`rewrite: ${req.method} ${req.hostname}${req.url}`);
-  }
+  console.log('middleware: locale:', locale);
+  req.locale = locale;
   next();
 }
 
@@ -36,7 +29,7 @@ function localeRewrite(req, res, next) {
   await app.prepare();
   const server = express();
 
-  server.use(localeRewrite);
+  server.use(detectLocale);
   server.get("*", (req, res) => handle(req, res));
 
   await server.listen(port);
