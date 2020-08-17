@@ -7,12 +7,6 @@ class MyDocument extends Document {
   }
 
   render() {
-    // Modify the path in __NEXT_DATA__ to remove /[locale] so that Next
-    // in the client is working with URLs that match what the browser is
-    // telling it (pre-rewrite) instead of what the server was working with
-    // (post-rewrite).
-    this.props.__NEXT_DATA__.page =
-      this.props.__NEXT_DATA__.page.replace("/[locale]", "") || "/";
     return (
       <Html>
         <Head />

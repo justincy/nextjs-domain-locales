@@ -20,8 +20,17 @@ const domainLocaleMap = {
 
 function detectLocale(req, res, next) {
   const locale = domainLocaleMap[req.hostname] || DEFAULT_LOCALE;
-  console.log('middleware: locale:', locale);
-  req.locale = locale;
+  // Only handle original page requests; ignore _next requests
+  if (req.url.indexOf("/_next") === -1 && req.url.indexOf("/__next") === -1) {
+    console.log('original url:', req.url);
+    console.log('middleware: locale:', locale);
+    if (req.url.indexOf('?') !== -1) {
+      req.url = `${req.url}&locale=${locale}`;
+    } else {
+      req.url = `${req.url}?locale=${locale}`;
+    }
+    console.log('final url:', req.url);
+  }
   next();
 }
 
