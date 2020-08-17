@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "../i18n";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -8,5 +8,7 @@ export default function Home() {
 }
 
 Home.getInitialProps = async () => {
-  return {};
+  return {
+    namespacesRequired: ['common']
+  };
 };

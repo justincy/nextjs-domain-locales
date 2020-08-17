@@ -1,15 +1,13 @@
 import Link from "next/link";
+import { useTranslation } from "../i18n";
 import styles from "./Header.module.css";
 
 function Header() {
+  const { t } = useTranslation();
   return (
     <header className={styles.header}>
       <Link href="/">
-        <a>Home</a>
-      </Link>
-      {" | "}
-      <Link href="/gip">
-        <a>getInitialProps</a>
+        <a>{t('home')}</a>
       </Link>
     </header>
   );
