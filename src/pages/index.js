@@ -8,5 +8,7 @@ export default function Home() {
 }
 
 Home.getInitialProps = async () => {
-  return {};
+  return {
+    namespacesRequired: ['common']
+  };
 };
