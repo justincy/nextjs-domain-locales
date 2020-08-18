@@ -35,7 +35,7 @@ const domainDetector = {
     }
     return locale;
   }
-}
+};
 
 // Now we create the NextI8Next instance. See their docs
 // for a full list of available options.
