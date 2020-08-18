@@ -1,6 +1,14 @@
 This started as a Next.js experiment to see if we can have domain based locales with static optimization by rewriting URLs on the server to prepend the locale. We almost got it working but then [Next.js v9.5.0 broke it](issues/3). We gave up and just used next-i18next with [a known solution](https://github.com/isaachinman/next-i18next/issues/16#issuecomment-520853281) to the problem.
 
+## Key Pieces
+
+### Custom i18next Language Detector
+
+All of the magic is done by a custom language detector in the [i18n.js](blob/master/src/i18n.js) file. Read through the comments in that file to see how it works. The interface for the custom language detector is [described here](https://github.com/i18next/i18next-http-middleware#interface).
+
 ### Hosts
+
+This code is configured to work with the domains listed below. This is enabled for local development by [modifying the hosts file](https://www.hostgator.com/help/article/how-do-i-change-my-hosts-file).
 
 - nexttest.com
 - nexttest.es
