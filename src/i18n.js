@@ -32,10 +32,7 @@ const domainDetector = {
       locale = domainLocaleMap[hostname];
     }
     return locale;
-  },
-  cacheUserLanguage(req, res, locale, options = {}) {
-    //todo
-  },
+  }
 }
 
 // Now we create the NextI8Next instance. See their docs
