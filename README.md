@@ -23,4 +23,4 @@ This code is configured to work with the domains listed below. This is enabled f
 - it.nexttest.international
 - ua.nexttest.international
 
-You can use any hosts you want as long as you configure them in the [i18n.js](blob/master/src/i18n.js) file.
+You can use any hosts you want as long as you configure them in the [i18n.js](src/i18n.js) file.
