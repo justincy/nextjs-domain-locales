@@ -3,6 +3,8 @@ const path = require('path');
 
 const DEFAULT_LOCALE = 'en';
 const supportedLangs = ['en', 'es', 'de', 'it', 'ua'];
+
+// This object allows us to map domain names to locales.
 const domainLocaleMap = {
   localhost: 'en',
   'nexttest.com': 'en',
