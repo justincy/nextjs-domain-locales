@@ -2,7 +2,7 @@ const NextI18Next = require('next-i18next').default;
 const path = require('path');
 
 const DEFAULT_LOCALE = 'en';
-const supportedLangs = ['en', 'es'];
+const supportedLangs = ['en', 'es', 'de', 'it', 'ua'];
 const domainLocaleMap = {
   localhost: 'en',
   'nexttest.com': 'en',
