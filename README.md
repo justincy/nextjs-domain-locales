@@ -11,7 +11,7 @@ This started as a Next.js experiment to see if we can have domain based locales 
 
 ### Custom i18next Language Detector
 
-All of the magic is done by a custom language detector in the [i18n.js](blob/master/src/i18n.js) file. Read through the comments in that file to see how it works. The interface for the custom language detector is [described here](https://github.com/i18next/i18next-http-middleware#interface).
+All of the magic is done by a custom language detector in the [i18n.js](src/i18n.js) file. Read through the comments in that file to see how it works. The interface for the custom language detector is [described here](https://github.com/i18next/i18next-http-middleware#interface).
 
 ### Hosts
 
